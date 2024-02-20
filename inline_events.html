@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- events are nothing but states of an object/html element which will gets change at a time of excution of code -->
+    <!-- handling an event in same html element is called 'inline event handling' which makes html code confusing -->
+    <button onclick="document.write('<h1> welcome to js event session</h1>'),console.log('Hiiiii'),alert('this is event alert!!')">Click Here</button>
+    <button ondblclick="return add(3,6)">Click Here 2 Times</button>
+    
+    <script>
+          function add(x,y)
+          {
+            console.log("add ="+(x+y));
+          }
+    </script>
+</body>
+</html>

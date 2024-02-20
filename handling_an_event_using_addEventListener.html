@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- addEvenListener listen the events performed by the user
+    handling an events by using addEvenListener() method allows you to apply multiple events on same html elements
+    -->
+    <div id="d1"> inside div</div>
+    <script>
+        let div1=document.querySelector("#d1");
+        //both of the below handlers will get execute for same html element div
+                         //eventname    //callback function
+        div1.addEventListener( "click" , (evt)=>{
+            let a=6;
+            console.log('event handler 1');
+            console.log(a);//6
+            console.log(a++);//6
+            console.log(a);//7     
+            console.log(evt);
+            console.log("type of event = "+evt.type);
+            console.log("target of event = "+evt.target);
+            console.log("events x axis position ="+evt.clientX);
+            console.log("events y axis position ="+evt.clientY);
+        } );
+
+        div1.addEventListener( "click"  ,()=>{
+            let a=9;
+            console.log('event handler 2');
+            console.log(a);//9
+            console.log(--a);//8
+            console.log(a);//8
+        } );
+        
+
+
+    </script>
+</body>
+</html>

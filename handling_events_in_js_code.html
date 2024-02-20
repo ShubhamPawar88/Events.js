@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b1">Click Here</button> 
+    <button id="b2">Click Here 2 Times</button>
+    <script>
+        //creating event handler in js code
+        //the problem with this way is if we are adding MULTIPLE events on  same html elemnt then all of that event handlers will not get work only the recent handler will get execute so to excute all the handlers related to same html element..we have to use addEventListener
+          let bt=document.getElementById("b1");
+          bt.onclick=()=>{
+            document.write('<h1> welcome to js event session</h1>'),console.log('Hiiiii'),alert('this is event alert!!');
+          }
+          bt.onclick=()=>{
+            console.log("hiii");
+           console.log("event handler 1");
+          }
+          
+          bt.onclick=()=>{
+            console.log("By");
+           console.log("event handler 2");
+          }
+
+          //only this handler will get execute for bt
+          
+          let bt1=document.getElementById("b2");
+          bt1.ondblclick=()=>{
+           return add(3,5);
+          }
+          function add(x,y)
+          {
+            console.log("add ="+(x+y));
+          }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 150px;
+            width: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+        <div id="d1">inside div</div>
+
+        <script>
+            let div1 =document.querySelector("#d1");
+                                  // eventname        callback
+            div1.addEventListener( "click"     , ()=>{
+                    let a=6;
+                    console.log('event Handler 1'); //6
+                    console.log(a++); //6
+                    console.log(a); //7
+                            }  );
+
+         //If we wants to remove any handler from the code the  we have to store the callback function of that handler in a variable then we can pass that variable as a parameter to the addEventListener() and removeEventListener() method
+            let removeHandler=()=>{
+                    let a=9;2
+                    console.log('event Handler 2'); //6
+                    console.log(a); //9
+                    console.log(--a); //8
+                    console.log(a); //8
+                    
+            };
+
+            div1.addEventListener( "click"     , removeHandler  );
+
+            div1.removeEventListener( "click"     ,  removeHandler );
+        </script>
+</body>
+</html>

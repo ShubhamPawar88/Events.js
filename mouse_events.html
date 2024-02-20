@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- handling an event in same html element is called 'inline event handling' which makes html code confusing -->
+    <h1 id="hh1" onmouseover="return f1()" onmouseleave="return f2()"> this is Mouse hover events</h1>
+    <script>
+        function f1()
+        {
+            let a= document.getElementById("hh1");
+            a.style.fontSize="3em";
+            a.style.color="red";
+        }
+
+          function f2()
+        {
+            let a= document.getElementById("hh1");
+            a.style.border="8px";
+            a.style.color="green";
+            a.style.fontStyle="italic";
+            a.style.borderStyle="double";
+            a.style.borderColor="aqua";
+            
+        }
+    </script>
+</body>
+</html>
